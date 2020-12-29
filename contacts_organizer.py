@@ -17,27 +17,31 @@ from time import sleep
 
 
 def add():
+    name = input("Please input new contact's name: ")
+    number = input("Please input new contact's number: ")
+    address = input("Please input new contact's address. Simply press Enter "
+                    "if not applicable: ")
+    birth_date = input("Please input new contact's birth date. Simply press "
+                       "Enter if not applicable: ")
+    if address == '':
+        address = '@!'
+    concatenated = name + '\n' + number + '\n' + address + '\n' + birth_date
     file_contacts = 'contacts.txt'
-    openfile = open(file_contacts, 'w')
-    listed = ['ok', 'something not right', 'just practicing']
-    for i in listed:
-        openfile.write(i)
+    openfile = open(file_contacts, 'a')
+    openfile.write(concatenated + '\n\n')
     openfile.close()
-
-    file_contacts = 'example.txt'
-    openfile = open(file_contacts, 'r')
-    openfile.readline()
-    openfile.close()
+    print("New contact added. Thanks for using the program.")
 
 
 def search():
     mode_1 = input("Type 1 to search by name, type 2 to search by phone "
-                   "number, type 3 to search by address.")
+                   "number, type 3 to search by address: ")
     data = open('contacts.txt', 'r').read()
     data_array = data.split("\n\n")
     if data_array == ['']:
         print('File is empty with no contacts, please restart the program.')
         exit()
+    del data_array[-1]
     if mode_1 == "1":
         name = []
         for i in data_array:
@@ -87,6 +91,7 @@ def list():
     if data_array == ['']:
         print('File is empty with no contacts, please restart the program.')
     else:
+        del data_array[-1]
         for i in data_array:
             print("Contact number " + str(counter) + ":")
             print(i)
@@ -102,7 +107,7 @@ if __name__ == '__main__':
         with open('contacts.txt', 'w'):  # Create a new local file if not exist
             pass
     mode = input("Type 1 to add a contact, type 2 search a contact, type 3 to "
-                 "list all contacts stored, press Enter after inputted.")
+                 "list all contacts stored, press Enter after inputted: ")
     if mode == '1':
         print("Received. You want to add a contact. \n")
         add()
