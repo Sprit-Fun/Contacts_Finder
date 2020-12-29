@@ -1,5 +1,5 @@
 # Author: Richard Lu
-# Project: contacts_finder
+# Project: Contacts Organizer
 # Date Started: December 2020
 # Contact: richardlu0928@gmail.com
 
