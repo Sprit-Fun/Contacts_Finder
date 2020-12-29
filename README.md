@@ -4,8 +4,7 @@
 # Contact: richardlu0928@gmail.com
 
 Description:
-Find and add contacts locally by running the program.
+Implemented the ability to search, locate, list, add or delete contacts on a local machine.
 
 Direction of use: 
-Clone the repository to your local machine, run contacts_organizer.py directly with IDLE installed, 
-then execute the program.
+Clone this repository to your local machine, run contacts_organizer.py with IDLE installed, then execute the program.
