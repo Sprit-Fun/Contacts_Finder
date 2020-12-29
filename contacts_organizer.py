@@ -1,13 +1,15 @@
 """
 # Author: Richard Lu
 # Project name: Contacts Organizer
-# Date: December 2020
-# Time used: 3 hours
-# Version: 0.1
+# Date Started: December 2020
+# Contact: richardlu0928@gmail.com
+# Total Time used: 3 hours
+# Last Updated: 2020/12/29
+# Version: 0.2
 """
 
 # This program can add contacts, search contacts and list out all contacts
-# stored locally. Run the program to edit contacts locally.
+# stored locally. Run the program with IDLE to edit contacts locally.
 
 import os
 from typing import List, Tuple, Dict, TextIO
