@@ -2,7 +2,7 @@
 # Author: Richard Lu
 # Project name: Contacts Organizer
 # Date: December 2020
-# Time used: 2 hours
+# Time used: 3 hours
 # Version: 0.1
 """
 
@@ -33,6 +33,9 @@ def search():
                    "number, type 3 to search by address.")
     data = open('contacts.txt', 'r').read()
     data_array = data.split("\n\n")
+    if data_array == ['']:
+        print('File is empty with no contacts, please restart the program.')
+        exit()
     if mode_1 == "1":
         name = []
         for i in data_array:
@@ -79,12 +82,15 @@ def list():
     counter = 1
     data = open('contacts.txt', 'r').read()
     data_array = data.split("\n\n")
-    for i in data_array:
-        print("Contact number " + str(counter) + ":")
-        print(i)
-        counter += 1
-        print()
-    print("All data has been printed out. Thanks for using the program.")
+    if data_array == ['']:
+        print('File is empty with no contacts, please restart the program.')
+    else:
+        for i in data_array:
+            print("Contact number " + str(counter) + ":")
+            print(i)
+            counter += 1
+            print()
+        print("All data has been printed out. Thanks for using the program.")
 
 
 if __name__ == '__main__':
