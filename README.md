@@ -1,10 +1,14 @@
 # Author: Richard Lu
-# Project: Contacts Organizer
-# Date Started: December 2020
-# Contact: richardlu0928@gmail.com
+# Project name: Contacts Organizer
+# Date Started: October 2020
+# Contact: admin@richardlu.ca
+# Repo: https://github.com/Sprit-Fun/Contacts_Organizer
+# Total Time used: 6 hours
+# Last Updated: 2022/01/03
+# Version: 1.01
 
 Description:
-Implemented the ability to search, locate, list, add or delete contacts on a local machine.
+This program can add contacts, delete contacts, search contacts and list out all contacts stored locally, encrypted with base64 for extra security. Run the program with any Python interpreter to edit contacts locally.
 
-Direction of use: 
-Clone this repository to your local machine, run contacts_organizer.py with IDLE installed, then execute the program.
+How to use: 
+Clone this repository to your local machine, run contacts_organizer.py with any Python interpreter and execute the program.
